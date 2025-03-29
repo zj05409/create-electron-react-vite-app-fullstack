@@ -1,0 +1,78 @@
+{
+    "name": "test-app",
+    "version": "1.0.0",
+    "description": "支持Web访问的Electron全栈应用",
+    "main": "electron/index.js",
+    "private": true,
+    "scripts": {
+        "dev": "concurrently -n \"server,web,electron\" \"npm run dev:server\" \"npm run dev:web\" \"npm run dev:electron\"",
+        "dev:web": "vite",
+        "dev:server": "node server/index.js",
+        "dev:electron": "cross-env ELECTRON_START_URL=http://localhost:5173 electron .",
+        "build": "vite build",
+        "build:electron": "npm run build && electron-builder",
+        "build:mac": "npm run build && electron-builder -m",
+        "build:win": "npm run build && electron-builder -w",
+        "build:linux": "npm run build && electron-builder -l",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.22.3",
+        "socket.io": "^4.6.1",
+        "socket.io-client": "^4.6.1"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.15",
+        "@types/react-dom": "^18.2.7",
+        "@vitejs/plugin-react": "^4.2.1",
+        "concurrently": "^8.2.2",
+        "cross-env": "^7.0.3",
+        "electron": "^29.1.0",
+        "electron-builder": "^24.13.1",
+        "vite": "^5.0.10",
+        "typescript": "^5.0.2",
+        "@types/node": "^20.2.5"
+    },
+    "build": {
+        "appId": "com.electron.testapp",
+        "productName": "Test App",
+        "files": [
+            "dist/**/*",
+            "electron/**/*",
+            "server/**/*",
+            "package.json",
+            "node_modules/**"
+        ],
+        "asarUnpack": [
+            "node_modules/**"
+        ],
+        "directories": {
+            "buildResources": "public",
+            "output": "release"
+        },
+        "mac": {
+            "target": [
+                "dmg",
+                "zip"
+            ],
+            "category": "public.app-category.developer-tools",
+            "hardenedRuntime": false
+        },
+        "win": {
+            "target": [
+                "nsis"
+            ]
+        },
+        "linux": {
+            "target": [
+                "AppImage"
+            ],
+            "category": "Development"
+        },
+        "asar": true
+    }
+}

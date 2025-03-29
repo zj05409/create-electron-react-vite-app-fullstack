@@ -1,0 +1,27 @@
+# 开发和测试文件
+node_modules/
+test/
+__tests__/
+coverage/
+.vscode/
+.idea/
+.github/
+.gitignore
+.DS_Store
+
+# 构建产物
+dist/
+release/
+*.log
+*.lock
+
+# 其他不需要发布的文件
+.eslintrc*
+.prettierrc*
+.editorconfig
+jest.config.js
+babel.config.js
+tsconfig.json
+
+# 示例和创建的项目文件夹
+create-electron-react-vite-app-fullstack/ 
