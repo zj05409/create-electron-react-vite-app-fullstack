@@ -1,6 +1,6 @@
 {
     "name": "create-electron-react-vite-app-fullstack",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "创建支持Web访问的Electron全栈应用",
     "main": "bin/cli.js",
     "bin": {
