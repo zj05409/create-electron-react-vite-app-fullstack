@@ -38,12 +38,12 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/yourusername/create-electron-react-vite-app-fullstack.git"
+        "url": "git+https://github.com/zj05409/create-electron-react-vite-app-fullstack.git"
     },
     "bugs": {
-        "url": "https://github.com/yourusername/create-electron-react-vite-app-fullstack/issues"
+        "url": "https://github.com/zj05409/create-electron-react-vite-app-fullstack/issues"
     },
-    "homepage": "https://github.com/yourusername/create-electron-react-vite-app-fullstack#readme",
+    "homepage": "https://github.com/zj05409/create-electron-react-vite-app-fullstack#readme",
     "engines": {
         "node": ">=16.0.0",
         "npm": ">=8.0.0"
