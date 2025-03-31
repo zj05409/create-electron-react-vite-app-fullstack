@@ -1,0 +1,45 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "启动所有开发服务",
+            "type": "shell",
+            "command": "npm run dev",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "仅启动前端开发服务",
+            "type": "shell",
+            "command": "npm run dev:web",
+            "problemMatcher": []
+        },
+        {
+            "label": "仅启动后端服务",
+            "type": "shell",
+            "command": "npm run dev:server",
+            "problemMatcher": []
+        },
+        {
+            "label": "仅启动Electron应用",
+            "type": "shell",
+            "command": "npm run dev:electron",
+            "problemMatcher": []
+        },
+        {
+            "label": "构建前端代码",
+            "type": "shell",
+            "command": "npm run build",
+            "problemMatcher": []
+        },
+        {
+            "label": "构建Electron应用",
+            "type": "shell",
+            "command": "npm run build:electron",
+            "problemMatcher": []
+        }
+    ]
+}

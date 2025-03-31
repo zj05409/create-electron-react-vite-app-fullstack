@@ -34,6 +34,9 @@ lerna-debug.log*
 *.sln
 *.sw?
 
+# 保留Cursor编辑器配置
+!/.cursor
+
 # 本地环境文件
 .env
 .env.local
